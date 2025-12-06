@@ -203,7 +203,7 @@ function ChatBotView() {
       // ⚠️ 关键修复：
       // 1. 地址必须是 localhost:8000 (Python后端)
       // 2. 发送的数据是 { message: ... }，不是 messages: [...]
-      const response = await axios.post('http://localhost:8000/api/chat', { 
+      const response = await axios.post('https://my-pawpal-app.onrender.com/api/chat', { 
         message: userMsg 
       });
       setMessages(prev => [...prev, { sender: 'bot', text: response.data.reply }]);
