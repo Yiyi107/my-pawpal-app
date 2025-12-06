@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 梦幻漂浮动画 */
+@keyframes floatDreamy {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float-dreamy {
+  animation: floatDreamy 7s ease-in-out infinite;
+}
+
+/* --- 升级版：彩色玻璃气泡 --- */
+.glass-bubble {
+  /* 基础玻璃质感 */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    inset 0 0 20px rgba(255, 255, 255, 0.3), /* 内部光晕 */
+    0 8px 20px rgba(0, 0, 0, 0.05); /* 外部阴影 */
+}
+
+/* 气泡的高光反射 (让它看起来像球体) */
+.glass-bubble::after {
+  content: '';
+  position: absolute;
+  top: 12%;
+  left: 15%;
+  width: 25%;
+  height: 12%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.1) 100%);
+  transform: rotate(-45deg);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+.notebook-texture {
+  background-color: #ffffff;
+  background-image: linear-gradient(#f7f7f7 1px, transparent 1px);
+  background-size: 100% 2rem;
+  line-height: 2rem;
+}
