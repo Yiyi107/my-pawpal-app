@@ -8,11 +8,11 @@ app = FastAPI()
 
 # --- Configuration ---
 # Apikey for Google Gemini API, remember to keep it safe!
-api_key = os.getenv("OPENAI_API_KEY")
+api_key = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=api_key)
 
 # --- CORS Middleware ---
-# Allows the React frontend to communicate with this backend
+# Allows the React frontend to communicate with this backend .
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], 
