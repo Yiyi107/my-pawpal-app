@@ -1,0 +1,36 @@
+# 名字：pawpal
+
+feature：
+
+Tracking Growth（成长记录功能）
+
+AI Q&A for behaviors（行为相关的AI答疑）
+
+Memory timeline（成长相册）
+
+
+ 技术栈：
+   - 前端：React + Vite + Tailwind CSS (部署在 Vercel)
+   - 后端：Python + FastAPI (部署在 Render)
+   - AI 模型：Google Gemini API (gemini-2.0-flash)
+   - 字体：Fredoka (cute)
+
+当前功能与设计：
+   - 日记功能 (Journal)：
+     - 输入框悬浮在中间，采用“笔记本纹理”。
+     - 已发布的内容是“彩色半透明玻璃气泡”，随机漂浮在四周。
+     - 支持上传图片，图片包裹在气泡中。
+   - AI 聊天 (ChatBot)：
+     - 顶部有一只澳牧 (Australian Shepherd) 吉祥物。
+     - 思考时小狗会歪头，输入框左侧是胶囊形状，发送键是独立的粉色大爪印。
+     - 后端已解决 CORS 问题，并正确连接 Render 生产环境。
+ 当前状态：
+   - 代码已托管在 GitHub。
+   - 前后端已成功部署并连接。
+   - App 风格为：清新、温暖、可爱、梦幻。
+
+
+后续功能：
+Add photo upload (even if dummy for now)
+
+Build a tiny local JSON database

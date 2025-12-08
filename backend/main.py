@@ -7,7 +7,7 @@ import os
 app = FastAPI()
 
 # --- Configuration ---
-# Replace the string below with your actual API Key
+# Apikey for Google Gemini API, remember to keep it safe!
 GOOGLE_API_KEY = "AIzaSyBGBqs7PEY-Y84S3oMWdcBJJC1R_F-po34" 
 genai.configure(api_key=GOOGLE_API_KEY)
 
