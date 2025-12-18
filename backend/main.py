@@ -7,7 +7,7 @@ import os
 app = FastAPI()
 
 # --- Configuration ---
-# Apikey for Google Gemini API, remember to keep it safe!
+# Apikey for Google Gemini API,  keep it safe!
 api_key = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=api_key)
 
@@ -25,7 +25,7 @@ class ChatRequest(BaseModel):
     message: str
 
 # --- AI Persona Settings ---
-# We define the AI's personality and language here
+# vibe: warm, professional, cute pet assistant for new pet owners
 model = genai.GenerativeModel('gemini-2.0-flash')
 system_instruction = (
     "You are a warm, professional, and cute pet assistant named 'PawPal'. "
